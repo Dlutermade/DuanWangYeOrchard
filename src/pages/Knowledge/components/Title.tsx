@@ -3,8 +3,12 @@ import { useLocation } from 'react-router-dom';
 
 const Title = () => {
   const { pathname } = useLocation();
+  const pathnameArr = pathname.split('/');
+
   const lastPath =
-    pathname.split('/').at(-1) || pathname.split('/').at(-2) || '';
+    pathnameArr[pathnameArr.length - 1] ||
+    pathnameArr[pathnameArr.length - 2] ||
+    '';
 
   return (
     <div className="text-center text-3xl font-semibold">

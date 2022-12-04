@@ -19,6 +19,8 @@ const usePathsIsMatched = (Paths: string[]) => {
   const { pathname } = useLocation();
   const [isMatched, setIsMatched] = useState(false);
 
+  const pathnameArr = pathname.split('/');
+
   const pathHasIndex = Paths.some((path) => path === '/');
 
   useEffect(() => {
@@ -27,7 +29,8 @@ const usePathsIsMatched = (Paths: string[]) => {
         (pathHasIndex && pathname === '/') ||
         Paths.some(
           (path) =>
-            (pathname.split('/').at(-1) || pathname.split('/').at(-2)) === path
+            (pathnameArr[pathnameArr.length - 1] ||
+              pathnameArr[pathnameArr.length - 2]) === path // 避免不支援Array.prototype.at
         )
     );
   }, [pathname]);
