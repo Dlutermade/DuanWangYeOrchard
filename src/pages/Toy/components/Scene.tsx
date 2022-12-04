@@ -1,11 +1,12 @@
 /* eslint-disable react/no-unknown-property */
+import Loadding from '@components/Loadding';
 import {
   Environment,
   OrbitControls,
   PerspectiveCamera,
 } from '@react-three/drei';
 import { useThree } from '@react-three/fiber';
-import React, { useImperativeHandle } from 'react';
+import React, { Suspense, useImperativeHandle } from 'react';
 import * as THREE from 'three';
 import { Model } from './Model';
 
@@ -71,16 +72,18 @@ const Scene: React.ForwardRefRenderFunction<Ref, Props> = (
 
       <ambientLight args={['#cccccc', 0.2]} />
 
-      <Model
-        position={[0, -2, 0]}
-        skinColor={skinColor}
-        pulpColor={pulpColor}
-        seedColor={seedColor}
-        handIdx={handIdx}
-        handColor={handColor}
-        footIdx={footIdx}
-        footColor={footColor}
-      />
+      <Suspense fallback={<Loadding isCanvas />}>
+        <Model
+          position={[0, -2, 0]}
+          skinColor={skinColor}
+          pulpColor={pulpColor}
+          seedColor={seedColor}
+          handIdx={handIdx}
+          handColor={handColor}
+          footIdx={footIdx}
+          footColor={footColor}
+        />{' '}
+      </Suspense>
 
       <mesh position={[0, -5, 0]} rotation={[-Math.PI / 2, 0, 0]} receiveShadow>
         <planeGeometry args={[150, 150]} />
