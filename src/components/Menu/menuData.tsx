@@ -27,7 +27,7 @@ export type MenuDataType = {
 };
 
 const inlineBlock = 'inline-block';
-const icon = `${inlineBlock} relative -left-[16px]`;
+const icon = `${inlineBlock} relative -left-[4px]`;
 
 const MenuData: MenuDataType[] = [
   {
