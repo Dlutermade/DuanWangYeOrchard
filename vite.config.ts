@@ -18,7 +18,7 @@ export default defineConfig({
     }),
     viteCompression(),
     legacy({
-      targets: ['defaults', 'not IE 11', 'safari 11'],
+      targets: ['defaults', 'not IE 11', 'iOS 11'],
     }),
   ],
   resolve: {
