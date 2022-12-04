@@ -21,10 +21,6 @@ const usePathsIsMatched = (Paths: string[]) => {
 
   const pathHasIndex = Paths.some((path) => path === '/');
 
-  if (pathHasIndex) {
-    Paths = Paths.filter((v) => v !== '/');
-  }
-
   useEffect(() => {
     setIsMatched(
       () =>
