@@ -1,0 +1,28 @@
+.Card {
+  position: relative;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.Card > div {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  transition: all 0.7s;
+}
+
+.Card > div:nth-child(2) {
+  transform: rotateY(180deg);
+}
+
+.Card:hover > div:nth-child(1) {
+  transform: rotateY(180deg);
+}
+
+.Card:hover > div:nth-child(2) {
+  transform: rotateY(360deg);
+}
