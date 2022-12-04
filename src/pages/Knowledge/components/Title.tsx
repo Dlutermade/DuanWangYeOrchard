@@ -12,7 +12,7 @@ const Title = () => {
 
   return (
     <div className="text-center text-3xl font-semibold">
-      <p>{lastPath.replace(/^. /g, (s) => s.toUpperCase())}</p>
+      <p>{lastPath.replace(/^./g, (s) => s.toUpperCase())}</p>
       <hr className="my-4 rounded-full border-t-4 border-gray-700" />
     </div>
   );
