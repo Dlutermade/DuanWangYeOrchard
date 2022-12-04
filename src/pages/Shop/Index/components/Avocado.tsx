@@ -60,7 +60,7 @@ const Avocado = (_: unknown, ref: React.ForwardedRef<Ref>) => {
 
   return (
     <a.div className="fixed left-0 top-0 z-50" style={{ ...avocadoSprings }}>
-      <AvocadoSvg width="3rem" height="3rem" />
+      <AvocadoSvg width="48px" height="48px" />
     </a.div>
   );
 };

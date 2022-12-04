@@ -27,16 +27,16 @@ export type MenuDataType = {
 };
 
 const inlineBlock = 'inline-block';
-const icon = `${inlineBlock} relative -left-1`;
+const icon = `${inlineBlock} relative -left-[16px]`;
 
 const MenuData: MenuDataType[] = [
   {
     path: '/',
-    icon: <Logo1 height="3rem" width="2.25rem" className={inlineBlock} />,
+    icon: <Logo1 height="48px" width="36px" className={inlineBlock} />,
     content: (
       <Logo2
-        height="3rem"
-        width="7rem"
+        height="48px"
+        width="112px"
         viewBox="0 0 95 20"
         className={inlineBlock}
       />
@@ -44,26 +44,26 @@ const MenuData: MenuDataType[] = [
   },
   {
     path: '/home',
-    icon: <Home height="3rem" width="3rem" className={icon} />,
-    hoverIcon: <HoverHome height="3rem" width="3rem" className={icon} />,
+    icon: <Home height="48px" width="48px" className={icon} />,
+    hoverIcon: <HoverHome height="48px" width="48px" className={icon} />,
     content: '首頁',
   },
   {
     path: '/latestNews',
-    icon: <LatestNews height="3rem" width="3rem" className={icon} />,
-    hoverIcon: <HoverLatestNews height="3rem" width="3rem" className={icon} />,
+    icon: <LatestNews height="48px" width="48px" className={icon} />,
+    hoverIcon: <HoverLatestNews height="48px" width="48px" className={icon} />,
     content: '最新消息',
   },
   {
     path: '/orchard',
-    icon: <Orchard height="3rem" width="3rem" className={icon} />,
-    hoverIcon: <HoverOrchard height="3rem" width="3rem" className={icon} />,
+    icon: <Orchard height="48px" width="48px" className={icon} />,
+    hoverIcon: <HoverOrchard height="48px" width="48px" className={icon} />,
     content: '果園介紹',
   },
   {
     path: '/knowledge',
-    icon: <Knowledge height="3rem" width="3rem" className={icon} />,
-    hoverIcon: <HoverKnowledge height="3rem" width="3rem" className={icon} />,
+    icon: <Knowledge height="48px" width="48px" className={icon} />,
+    hoverIcon: <HoverKnowledge height="48px" width="48px" className={icon} />,
     content: '酪梨小百科',
     submenu: [
       {
@@ -78,27 +78,27 @@ const MenuData: MenuDataType[] = [
   },
   {
     path: '/toy',
-    icon: <Toy height="3rem" width="3rem" className={icon} />,
-    hoverIcon: <HoverToy height="3rem" width="3rem" className={icon} />,
+    icon: <Toy height="48px" width="48px" className={icon} />,
+    hoverIcon: <HoverToy height="48px" width="48px" className={icon} />,
     content: '我的小酪梨',
   },
   {
     path: '/shop',
-    icon: <Shop height="3rem" width="3rem" className={icon} />,
-    hoverIcon: <HoverShop height="3rem" width="3rem" className={icon} />,
+    icon: <Shop height="48px" width="48px" className={icon} />,
+    hoverIcon: <HoverShop height="48px" width="48px" className={icon} />,
     content: '酪梨購買',
   },
   {
     path: '/feedback',
-    icon: <Feedback height="3rem" width="3rem" className={icon} />,
-    hoverIcon: <HoverFeedback height="3rem" width="3rem" className={icon} />,
+    icon: <Feedback height="48px" width="48px" className={icon} />,
+    hoverIcon: <HoverFeedback height="48px" width="48px" className={icon} />,
     content: '顧客好評',
   },
   {
     path: 'https://www.facebook.com/people/%E6%AE%B5%E7%8E%8B%E7%88%BA%E3%81%AE%E6%9E%9C%E5%9C%92/100083708892925/',
-    icon: <Fackbook height="2rem" width="3rem" className={icon + 'left-0'} />,
+    icon: <Fackbook height="2rem" width="48px" className={icon + 'left-0'} />,
     hoverIcon: (
-      <Fackbook height="2rem" width="3rem" className={icon + 'left-1'} />
+      <Fackbook height="2rem" width="48px" className={icon + 'left-[4px]'} />
     ),
     content: '粉絲專頁',
   },

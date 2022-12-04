@@ -16,9 +16,9 @@ import { ReactComponent as Cart3 } from '../../../assets/img/shop/cart3.svg';
 import Avocado from './components/Avocado';
 
 const Cart = [
-  <Cart1 width="6rem" height="6rem" key={0} />,
-  <Cart2 width="6rem" height="6rem" key={1} />,
-  <Cart3 width="6rem" height="6rem" key={2} />,
+  <Cart1 width="96px" height="96px" key={0} />,
+  <Cart2 width="96px" height="96px" key={1} />,
+  <Cart3 width="96px" height="96px" key={2} />,
 ];
 
 const index = () => {
