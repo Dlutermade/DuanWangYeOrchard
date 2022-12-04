@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react';
 import svgrPlugin from 'vite-plugin-svgr';
 import eslintPlugin from 'vite-plugin-eslint';
 import viteCompression from 'vite-plugin-compression';
-
+import legacy from '@vitejs/plugin-legacy';
 import path from 'path';
 
 // https://vitejs.dev/config/
@@ -17,6 +17,9 @@ export default defineConfig({
       },
     }),
     viteCompression(),
+    legacy({
+      targets: ['defaults', 'not IE 11', 'safari 11'],
+    }),
   ],
   resolve: {
     alias: {
