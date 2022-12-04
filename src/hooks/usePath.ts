@@ -27,7 +27,7 @@ const usePathsIsMatched = (Paths: string[]) => {
         (pathHasIndex && pathname === '/') ||
         Paths.some(
           (path) =>
-            pathname.match(new RegExp('(?<=/)[a-zA-z]+', 'g'))?.at(-1) === path
+            (pathname.split('/').at(-1) || pathname.split('/').at(-2)) === path
         )
     );
   }, [pathname]);
