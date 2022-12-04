@@ -53,9 +53,9 @@ const MenuItem: React.FC<Props> = ({
         {isDisplayContent && (
           <MenuContent
             content={content}
-            renderContentClassname={(content) =>
-              typeof content === 'string' ? 'top-3' : 'h-12 pt-1'
-            }
+            renderContentClassname={function (content) {
+              return typeof content === 'string' ? 'top-3' : 'h-12 pt-1';
+            }}
             depth={depth}
             delay={delay}
           />
