@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://Dlutermade.github.io/DuanWangYeOrchard",
+  "homepage": "https://dlutermade.github.io/duan-wang-ye-orchard",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
