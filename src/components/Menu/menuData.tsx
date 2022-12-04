@@ -96,9 +96,9 @@ const MenuData: MenuDataType[] = [
   },
   {
     path: 'https://www.facebook.com/people/%E6%AE%B5%E7%8E%8B%E7%88%BA%E3%81%AE%E6%9E%9C%E5%9C%92/100083708892925/',
-    icon: <Fackbook height="2rem" width="48px" className={icon + 'left-0'} />,
+    icon: <Fackbook height="32px" width="48px" className={icon + 'left-0'} />,
     hoverIcon: (
-      <Fackbook height="2rem" width="48px" className={icon + 'left-[4px]'} />
+      <Fackbook height="32px" width="48px" className={icon + 'left-[4px]'} />
     ),
     content: '粉絲專頁',
   },
