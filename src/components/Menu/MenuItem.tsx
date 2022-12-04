@@ -45,6 +45,9 @@ const MenuItem: React.FC<Props> = ({
     }
   };
 
+  const renderContentClassname = (content: React.ReactNode) =>
+    typeof content === 'string' ? 'top-3' : 'h-12 pt-1';
+
   return (
     <li onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
       <MyLink path={path} className="h-12" onClick={handleClick}>
@@ -53,9 +56,7 @@ const MenuItem: React.FC<Props> = ({
         {isDisplayContent && (
           <MenuContent
             content={content}
-            renderContentClassname={function (content) {
-              return typeof content === 'string' ? 'top-3' : 'h-12 pt-1';
-            }}
+            renderContentClassname={renderContentClassname}
             depth={depth}
             delay={delay}
           />
