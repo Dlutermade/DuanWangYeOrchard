@@ -1,12 +1,13 @@
 {
-  "name": "project",
+  "name": "duanwangyeorchard",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://Dlutermade.github.io/DuanWangYeOrchard",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "preview": "vite preview"
   },
   "dependencies": {
