@@ -29,8 +29,6 @@ const Avocado = (props: JSX.IntrinsicElements['group']) => {
     'models/avocado1/model.glb'
   ) as unknown as GLTFResult;
 
-  console.log(materials);
-
   const spring = useAvocadoSpring();
 
   const ref = useRef<THREE.Group>(null);
