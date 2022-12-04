@@ -82,7 +82,7 @@ const Scene: React.ForwardRefRenderFunction<Ref, Props> = (
           handColor={handColor}
           footIdx={footIdx}
           footColor={footColor}
-        />{' '}
+        />
       </Suspense>
 
       <mesh position={[0, -5, 0]} rotation={[-Math.PI / 2, 0, 0]} receiveShadow>
