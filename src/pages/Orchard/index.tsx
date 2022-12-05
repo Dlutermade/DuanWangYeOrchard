@@ -19,7 +19,7 @@ const index = () => {
 
   return (
     <Parallax pages={3} ref={ref} className="inset-0 duration-300 ">
-      <ParallaxLayer offset={0} className="-z-10" speed={-1}>
+      <ParallaxLayer offset={0.8} className="-z-10" speed={-0.1}>
         <div className="relative h-screen">
           <img
             className="absolute bottom-0 aspect-video w-screen object-cover"
@@ -42,11 +42,11 @@ const index = () => {
         </ul>
       </ParallaxLayer>
 
-      <ParallaxLayer offset={0.3} speed={1.2}>
+      <ParallaxLayer offset={0.3} speed={0.8}>
         <OwnerIntroduction />
       </ParallaxLayer>
 
-      <ParallaxLayer offset={1.15} speed={1.2}>
+      <ParallaxLayer offset={1.15} speed={0.8}>
         <OrchardEnvironment />
       </ParallaxLayer>
     </Parallax>
