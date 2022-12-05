@@ -48,7 +48,7 @@ const index = () => {
 
   return (
     <div className="w-full overflow-hidden rounded-xl border-2 border-gray-800 bg-coconut-cream-100 shadow-lg shadow-slate-700">
-      <div className="relative mt-6 h-[600px]">
+      <div className="relative mx-10 mt-10 h-[600px]">
         <Canvas shadows>
           <Scene
             skinColor={skinColor}
