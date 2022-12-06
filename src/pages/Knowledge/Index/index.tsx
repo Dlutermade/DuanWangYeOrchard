@@ -21,13 +21,14 @@ const Index = () => {
   return (
     <>
       {/* 3D酪梨 */}
-      <div className="relative h-[600px] sm:h-[800px]">
+      <div className="relative mx-4 h-[600px] sm:h-[800px]">
         <Suspense fallback={<Loadding />}>
           <Canvas shadows>
             <AvocadoModel changeDisplayIngredients={changeDisplayIngredients} />
           </Canvas>
         </Suspense>
       </div>
+
       {displayIngredients !== -1 && (
         <AvocadoCard
           idx={displayIngredients}
