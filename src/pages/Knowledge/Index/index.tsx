@@ -54,7 +54,7 @@ const Index = () => {
           判斷黑美人酪梨成熟
         </h3>
       </div>
-      <AvocadoRipe className="mt-6 pb-24" />
+      <AvocadoRipe className="mt-6 flex items-center justify-center pb-24" />
     </>
   );
 };

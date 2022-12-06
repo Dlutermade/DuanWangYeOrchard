@@ -29,7 +29,7 @@ const SideNav: React.FC<Props> = ({ isTransparent }) => {
 
   return (
     <animated.nav
-      className={`fixed inset-0 z-50 flex h-screen w-14 flex-col justify-center py-2 px-2 text-left text-2xl font-semibold ${
+      className={`fixed inset-0 z-50 flex h-screen w-14 flex-col justify-center py-2 px-2 text-left text-2xl font-medium ${
         isTransparent
           ? 'bg-cactus-500/50 text-gray-800 shadow-cactus-800/50'
           : 'bg-cactus-500 text-slate-100 shadow-cactus-800'

@@ -33,7 +33,7 @@ const AvocadoSeason: React.FC<Props> = ({ className }) => {
 
             <p
               className={`mx-auto mt-4 w-48 rounded-xl px-4 py-2 text-slate-200 ${
-                isSeason ? 'bg-cactus-500' : 'bg-rose-500/90 '
+                isSeason ? 'bg-cactus-500' : 'bg-gray-500 '
               }`}
             >
               {isSeason ? '產季' : '休季'}

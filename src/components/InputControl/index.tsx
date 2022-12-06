@@ -25,7 +25,7 @@ const index: React.FC<Props> = ({
   return (
     <div className="mt-6">
       {dataError && (
-        <p className="mb-2 rounded-lg bg-rose-500 px-4 py-2 text-lg">
+        <p className="mb-2 rounded-lg bg-rose-400 px-4 py-2 text-lg">
           {errorMsg}
         </p>
       )}
@@ -38,7 +38,8 @@ const index: React.FC<Props> = ({
           {inputLabel}
         </p>
         <input
-          className="h-8 flex-1 rounded-lg border-2 border-gray-800 outline-none focus:border-cactus-600"
+          className="h-8 flex-1 rounded-lg border-2 border-gray-400 outline-none focus:border-cactus-600"
+          placeholder={`    ${errorMsg}`}
           type={type}
           value={data}
           onFocus={handleFocus}

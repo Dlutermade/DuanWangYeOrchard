@@ -17,7 +17,7 @@ const RadioGroup: React.FC<Props> = ({
 }) => {
   return (
     <div className={`space-x-5 md:space-x-8 ${className}`}>
-      <span className="-mr-4 text-xl">{label}</span>
+      <span className="text-xl">{label}</span>
       {option.map((item, idx) => (
         <label className="inline-block" key={idx}>
           <input

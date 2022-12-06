@@ -10,6 +10,8 @@ import React, { Suspense, useImperativeHandle } from 'react';
 import * as THREE from 'three';
 import { Model } from './Model';
 
+import mark from '@assets/toy/Frame_724.png';
+
 type Ref = {
   SceneToJpg: () => Promise<string>;
 };
@@ -40,11 +42,20 @@ const Scene: React.ForwardRefRenderFunction<Ref, Props> = (
         canvas.height = gl.domElement.height;
         gl.render(scene, camera);
 
+        const p = new Promise<HTMLImageElement>((resolve, reject) => {
+          const img = new Image();
+          img.onload = () => resolve(img);
+          img.onerror = reject;
+          img.src = mark;
+        });
+
         const ctx = canvas.getContext('2d');
+
         if (ctx) {
           ctx.drawImage(gl.domElement, 0, 0);
-          ctx.font = '500 24px "Noto Sans TC"';
-          ctx.fillText('出於段王爺的果園', 30, 20);
+
+          await p.then((img) => ctx.drawImage(img, 10, 0));
+
           const dataUrl = canvas.toDataURL('image/jpeg');
           return dataUrl;
         }
@@ -74,7 +85,7 @@ const Scene: React.ForwardRefRenderFunction<Ref, Props> = (
 
       <Suspense fallback={<Loadding isCanvas />}>
         <Model
-          position={[0, -2, 0]}
+          position={[0, -2.5, 0]}
           skinColor={skinColor}
           pulpColor={pulpColor}
           seedColor={seedColor}

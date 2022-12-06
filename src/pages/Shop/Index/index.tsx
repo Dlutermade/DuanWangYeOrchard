@@ -128,7 +128,7 @@ const index = () => {
       <Link
         ref={cartRef}
         to="/shop/order"
-        className="fixed right-1 bottom-0 scale-75 sm:right-6 sm:bottom-3 sm:scale-100"
+        className="fixed right-1 bottom-0 scale-75 sm:right-6 sm:bottom-3 sm:scale-100 md:right-12 md:bottom-10"
       >
         {Cart[cartState]}
       </Link>

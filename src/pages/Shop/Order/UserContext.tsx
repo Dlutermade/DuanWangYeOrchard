@@ -47,7 +47,7 @@ const initData = {
     name: '',
     address: '',
     email: '',
-    phoneNumber: '0900-',
+    phoneNumber: '',
     remittanceAccount: '',
     remark: '',
   },

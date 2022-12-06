@@ -193,15 +193,16 @@ export function Model({
       <mesh
         geometry={nodes.groupNumber_0_6.geometry}
         material={materials.material2}
-        position={[0.0, 3.1, -0.02]}
+        position={[0.08, 3.1, -0.02]}
         rotation={[Math.PI, 0, Math.PI]}
       />
       <mesh
         geometry={nodes.groupNumber_0_2.geometry}
         material={materials.material3}
-        position={[0.03, 2.61, 0.3]}
+        position={[0.13, 2.61, 0.3]}
         rotation={[-1.4, 1.01, -0.34]}
-        scale={[1, 1.02, 1]}
+        // scale={[1.1, 1.12, 1.1]}
+        scale={[1.3, 1.32, 1.3]}
       />
     </group>
   );

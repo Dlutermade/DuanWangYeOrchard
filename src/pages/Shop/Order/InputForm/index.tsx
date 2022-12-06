@@ -27,6 +27,7 @@ const HandlerGenerator =
   };
 
 const index: React.FC<Props> = ({ handlePrevSetp, handleNextSetp }) => {
+  const [readySentFlag, setReadySentFlagg] = useState(false);
   const [uploading, setUploading] = useState(false);
   const { data, dataError, dataErrorMsg } = useFormDataContext();
   const formDataHasError = useFormDataHasError();
@@ -48,28 +49,28 @@ const index: React.FC<Props> = ({ handlePrevSetp, handleNextSetp }) => {
       onChange: handleFormDataChange('name'),
     },
     {
-      inputLabel: '手機電話',
+      inputLabel: '手機電話　',
       data: data.phoneNumber,
       dataError: dataError.phoneNumber,
       errorMsg: dataErrorMsg.phoneNumber,
       onChange: handleFormDataChange('phoneNumber'),
     },
     {
-      inputLabel: '電子信箱',
+      inputLabel: '電子信箱　',
       data: data.email,
       dataError: dataError.email,
       errorMsg: dataErrorMsg.email,
       onChange: handleFormDataChange('email'),
     },
     {
-      inputLabel: '收貨地址',
+      inputLabel: '收貨地址　',
       data: data.address,
       dataError: dataError.address,
       errorMsg: dataErrorMsg.address,
       onChange: handleFormDataChange('address'),
     },
     {
-      inputLabel: '匯款帳號',
+      inputLabel: '匯款帳號　',
       data: data.remittanceAccount,
       dataError: dataError.remittanceAccount,
 
@@ -77,7 +78,7 @@ const index: React.FC<Props> = ({ handlePrevSetp, handleNextSetp }) => {
       onChange: handleFormDataChange('remittanceAccount'),
     },
     {
-      inputLabel: '備註訊息',
+      inputLabel: '備註訊息　',
       data: data.remark,
       dataError: dataError.remark,
       errorMsg: dataErrorMsg.remark,
@@ -90,6 +91,7 @@ const index: React.FC<Props> = ({ handlePrevSetp, handleNextSetp }) => {
 
     if (formDataHasError) {
       alert('請確認資訊的填寫');
+      setReadySentFlagg(true);
     } else {
       if (confirm('請再次確認是否要送出訂單!!')) {
         setUploading(true);
@@ -133,7 +135,7 @@ const index: React.FC<Props> = ({ handlePrevSetp, handleNextSetp }) => {
             inputLabel={inputLabel}
             data={data}
             errorMsg={errorMsg}
-            dataError={dataError}
+            dataError={readySentFlag && dataError}
             onChange={onChange}
             key={idx}
             type="text"

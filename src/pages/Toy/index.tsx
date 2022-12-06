@@ -62,10 +62,11 @@ const index = () => {
           />
         </Canvas>
       </div>
+
       <div className="mt-6 pb-16 text-lg">
-        <div className="flex flex-grow-0 flex-col md:flex-row">
-          <label className="ml-6 mt-2 inline-block text-xl">
-            <span className="mr-4">雙手的顏色</span>
+        <div className="flex flex-grow-0 flex-col divide-gray-500 md:flex-row md:divide-x-2">
+          <label className="mt-2 inline-block px-6 text-xl md:px-3 md:pl-6">
+            <span className="mr-4">雙手顏色</span>
             <input
               type="color"
               value={handColor}
@@ -73,8 +74,8 @@ const index = () => {
             />
           </label>
 
-          <label className="ml-6 mt-2 inline-block text-xl">
-            <span className="mr-4">雙腳的顏色</span>
+          <label className="mt-2 inline-block px-6 text-xl md:px-3">
+            <span className="mr-4">雙腳顏色</span>
             <input
               type="color"
               value={footColor}
@@ -82,8 +83,8 @@ const index = () => {
             />
           </label>
 
-          <label className="ml-6 mt-2 inline-block text-xl">
-            <span className="mr-4">果皮的顏色</span>
+          <label className="mt-2 inline-block px-6 text-xl md:px-3">
+            <span className="mr-4">果皮顏色</span>
             <input
               type="color"
               value={skinColor}
@@ -91,16 +92,16 @@ const index = () => {
             />
           </label>
 
-          <label className="ml-6 mt-2 inline-block text-xl">
-            <span className="mr-4">果肉的顏色</span>
+          <label className="mt-2 inline-block px-6 text-xl md:px-3">
+            <span className="mr-4">果肉顏色</span>
             <input
               type="color"
               value={pulpColor}
               onChange={handleChangePulpColor}
             />
           </label>
-          <label className="ml-6 mt-2 inline-block text-xl">
-            <span className="mr-4">果實的顏色</span>
+          <label className="mt-2 inline-block px-6 text-xl md:px-3">
+            <span className="mr-4">果實顏色</span>
             <input
               type="color"
               value={seedColor}
@@ -111,14 +112,14 @@ const index = () => {
 
         <RadioGroup
           className="ml-6 mt-4"
-          label="雙手的類型"
+          label="雙手類型"
           option={hand}
           value={handIdx}
           changeValue={setHadnIdx}
         />
         <RadioGroup
-          className="ml-6"
-          label="雙腳的類型"
+          className="ml-6 mt-2"
+          label="雙腳類型"
           option={foot}
           value={footIdx}
           changeValue={setFootIdx}
