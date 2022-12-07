@@ -14,7 +14,7 @@ const AvocadoSeason: React.FC<Props> = ({ className }) => {
           key={idx}
         >
           <img
-            className="aspect-square h-48 rounded-full"
+            className=" h-48 w-48 rounded-full object-cover"
             src={imgPath}
             alt=""
           />

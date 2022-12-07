@@ -3,7 +3,10 @@ import { Parallax, ParallaxLayer, IParallax } from '@react-spring/parallax';
 import Card from './components/Card';
 import Data from './CardData';
 
-import bg from '@assets/orchard/bg.png';
+import bg1 from '@assets/orchard/bg1.png';
+import bg2 from '@assets/orchard/bg2.png';
+import bg3 from '@assets/orchard/bg3.png';
+
 import cloud from '@assets/orchard/cloud.png';
 import avacado from '@assets/orchard/avacado.png';
 
@@ -25,14 +28,44 @@ const index = () => {
 
   return (
     <Parallax pages={3} ref={ref} className="inset-0 duration-300 ">
-      <ParallaxLayer offset={0.5} className="-z-10" speed={0.8}>
-        <img className="aspect-video w-screen object-cover" src={bg}></img>
+      <ParallaxLayer
+        offset={0.5}
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+        className="-z-10"
+        speed={0.8}
+      >
+        <img
+          className="aspect-video w-screen object-cover object-bottom"
+          src={bg2}
+        ></img>
       </ParallaxLayer>
-      <ParallaxLayer offset={1.45} className="-z-10" speed={0.8}>
-        <img className="aspect-video w-screen object-cover" src={bg}></img>
+      <ParallaxLayer
+        offset={1}
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+        className="-z-10"
+        speed={0.8}
+      >
+        <img className="aspect-video w-screen" src={bg3}></img>
       </ParallaxLayer>
-      <ParallaxLayer offset={2.35} className="-z-10" speed={0.8}>
-        <img className="aspect-video w-screen object-cover" src={bg}></img>
+      <ParallaxLayer
+        offset={2}
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+        className="-z-10"
+        speed={0.8}
+      >
+        <img className="aspect-video w-screen" src={bg1}></img>
       </ParallaxLayer>
 
       <>

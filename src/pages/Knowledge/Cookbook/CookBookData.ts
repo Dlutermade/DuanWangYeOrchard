@@ -1,11 +1,12 @@
+import a1 from '@assets/cookbook/a1.jpg';
 import a2 from '@assets/cookbook/a2.jpg';
 import a3 from '@assets/cookbook/a3.jpg';
 
 const CookbookData = [
   {
     title: '酪梨布丁牛奶',
-    img: a3,
-    list: ['Mos牌和風醬', '超商舒肥雞', '酪梨'],
+    img: a1,
+    list: ['酪梨 1顆', '牛奶 500 ml', '布丁 1個', '蜂蜜適量'],
   },
   {
     title: '酪梨水果沙拉',

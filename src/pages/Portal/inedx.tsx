@@ -7,18 +7,25 @@ import {
   OrbitControls,
 } from '@react-three/drei';
 import * as THREE from 'three';
-import React, { Suspense } from 'react';
+import React, { Suspense, useState } from 'react';
 import Avocado from './components/Avocado';
 import Background from './components/Background';
 import { useNavigate } from 'react-router-dom';
 import Loadding from '@components/Loadding';
 
+import TipImg from '@assets/portal/a9f96b985ba9adc6.gif';
+
 const Portal = () => {
   const navigate = useNavigate();
+  const [isClicked, setIsClicked] = useState(false);
 
   const handleClick: React.MouseEventHandler = (e) => {
     e.preventDefault();
     navigate('/home');
+  };
+
+  const handlePointerDown = () => {
+    setIsClicked(() => true);
   };
 
   return (
@@ -40,7 +47,7 @@ const Portal = () => {
         <ambientLight args={['#ffffff', 0.1]} />
 
         <Suspense fallback={<Loadding isCanvas />}>
-          <Avocado position={[0, -1.5, -1]} />
+          <Avocado position={[0, -1.5, -1]} onPointerDown={handlePointerDown} />
         </Suspense>
 
         <Background />
@@ -52,12 +59,15 @@ const Portal = () => {
         >
           <div className="pointer-events-none mx-auto flex h-screen w-full flex-col items-center justify-between text-4xl font-semibold">
             <h2 className="pointer-events-auto mt-24">創新的酪梨小農網頁</h2>
-            <div className="pointer-events-auto flex flex-col items-center justify-center">
-              <small className="-translate-y-6 text-sm font-semibold italic underline">
-                請嘗試滑鼠或是手指按住畫面滑動
-              </small>
+            <div className="flex flex-col items-center justify-center">
+              <img
+                src={TipImg}
+                className={`w-32 -translate-y-6 object-cover ${
+                  isClicked ? 'hidden' : ''
+                }`}
+              />
               <button
-                className="mb-20 h-16 w-44 animate-bounce rounded-2xl bg-hemp-600 text-slate-100 shadow-lg shadow-hemp-600 hover:bg-hemp-800"
+                className="pointer-events-auto mb-20 h-16 w-44 animate-bounce rounded-2xl bg-hemp-600 text-slate-100 shadow-lg shadow-hemp-600 hover:bg-hemp-800"
                 onClick={handleClick}
               >
                 進入首頁
