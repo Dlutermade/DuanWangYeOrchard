@@ -27,7 +27,7 @@ const index = () => {
   ('採收－剪蒂頭－裝保護套－裝箱秤重－寄出');
 
   return (
-    <Parallax pages={3} ref={ref} className="inset-0 duration-300 ">
+    <Parallax pages={3.2} ref={ref} className="inset-0 duration-300 ">
       <ParallaxLayer
         offset={0.5}
         style={{

@@ -48,7 +48,10 @@ const index = () => {
 
   return (
     <div className="w-full overflow-hidden rounded-xl border-2 border-gray-800 bg-coconut-cream-100 shadow-lg shadow-slate-700">
-      <div className="relative mx-10 mt-10 h-[600px]">
+      <h2 className="mt-4 text-center text-xl md:text-2xl">
+        創造屬於你/妳的酪梨
+      </h2>
+      <div className="relative mx-10 mt-4 h-[600px]">
         <Canvas shadows>
           <Scene
             skinColor={skinColor}
